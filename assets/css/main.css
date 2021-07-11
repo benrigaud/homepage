@@ -43,13 +43,24 @@ main .container{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: calc(100vh - 68px);
+}
+
+.br-hello{
+    max-width: 240px;
+    margin-bottom: 20px;
+}
+
+.br-hello-slide{
+    height: 35px;
 }
 
 .br h2{
     margin: 0;
-    margin-bottom: 10px;
     position: relative;
+    text-align: center;
+    line-height: 1em;
+    font-size: 30px;
 }
 
 .br-buttons{
@@ -59,12 +70,12 @@ main .container{
     width: 100%;
 }
 
-.br a{
+.br main a{
     color: var(--br-black);
     text-decoration: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;o
+    justify-content: center;
     transition: ease-in-out .2s;
     padding: 10px;
     flex: 1;
@@ -85,23 +96,32 @@ main .container{
     main .container{
         flex-direction: row;
     }
-    
-    .br h2{
+
+    .br-hello{
         margin-bottom: 0;
-        margin-right: 20px;
-        font-size: 40px;
-        padding-right: 40px;
+        margin-left: -80px;
+        position: relative;
+        padding-right: 20px;
     }
 
-    .br h2:after{
+    .br-hello::after{
         content: "";
-        display: block;
+        background-color: #eee;
         width: 2px;
         height: 100%;
-        background-color: #eee;
         position: absolute;
         top: 0;
         right: 0;
+    }
+
+    .br-hello-slide{
+        height: 60px;
+    }
+
+    .br h2{
+        margin-bottom: 0;
+        font-size: 40px;
+        text-align: right;
     }
 
     .br-buttons{
@@ -110,7 +130,7 @@ main .container{
         align-items: center;
     }
 
-    .br a{
+    .br main a{
         padding: 0;
         flex-direction: row;
         justify-content: inherit;
@@ -119,4 +139,37 @@ main .container{
     .br a i{
         margin-right: 4px;
     }
+}
+
+
+
+/*--------------------------------------------------------------
+## FOOTER
+--------------------------------------------------------------*/
+footer{
+    padding: 10px 0;
+    background-color: #fff;
+}
+
+footer p{
+    font-size: 12px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p i.material-icons{
+    margin-right: 2px;
+}
+
+footer p a{
+    margin-left: 3px;
+    color: var(--br-accent);
+    text-decoration: none;
+    transition: ease-in-out .2s;
+}
+
+.br a:hover{
+    color: var(--br-accent-hover);
 }
