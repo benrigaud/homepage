@@ -1,0 +1,122 @@
+/*--------------------------------------------------------------
+## MISC
+--------------------------------------------------------------*/
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--br-bg);
+    margin: 0;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+
+/*--------------------------------------------------------------
+## COLORS
+--------------------------------------------------------------*/
+:root {
+    --br-black: #333;
+    --br-bg: #f9f9f9;
+    --br-accent: #0ec5ce;
+    --br-accent-hover: #0ba7af; 
+}
+
+
+
+/*--------------------------------------------------------------
+## MAIN
+--------------------------------------------------------------*/
+main .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.br h2{
+    margin: 0;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.br-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.br a{
+    color: var(--br-black);
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;o
+    transition: ease-in-out .2s;
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.br a:hover{
+    color: var(--br-accent);
+}
+
+.br a i{
+    color: var(--br-accent);
+}
+
+@media (min-width:552px){
+    main .container{
+        flex-direction: row;
+    }
+    
+    .br h2{
+        margin-bottom: 0;
+        margin-right: 20px;
+        font-size: 40px;
+        padding-right: 40px;
+    }
+
+    .br h2:after{
+        content: "";
+        display: block;
+        width: 2px;
+        height: 100%;
+        background-color: #eee;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .br-buttons{
+        flex-direction: row;
+        width: 342px;
+        align-items: center;
+    }
+
+    .br a{
+        padding: 0;
+        flex-direction: row;
+        justify-content: inherit;
+    }
+
+    .br a i{
+        margin-right: 4px;
+    }
+}
