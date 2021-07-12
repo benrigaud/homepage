@@ -90,6 +90,11 @@ main .container{
 
 .br a i{
     color: var(--br-accent);
+    transition: ease-in-out .2s;
+}
+
+.br a:hover i{
+    transform: translateX(-4px);
 }
 
 @media (min-width:552px){
